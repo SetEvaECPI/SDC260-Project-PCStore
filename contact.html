@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Evans PC Tech</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="brand-row">
+      <h1 class="site-title">Evans PC Tech</h1>
+      <form class="search-bar" action="products.html" method="get">
+        <label for="site-search" class="sr-only">Search products</label>
+        <input id="site-search" name="q" type="search" placeholder="Search PC parts and accessories">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>Contact Evans PC Tech</h2>
+    <p>Questions about a product or your order? Send us a message.</p>
+  </section>
+
+  <form id="contact-form" class="panel" novalidate>
+    <div>
+      <label for="full-name">Full Name</label>
+      <input id="full-name" name="fullName" type="text">
+    </div>
+
+    <div>
+      <label for="contact-email">Email Address *</label>
+      <input id="contact-email" name="email" type="email" required>
+      <small class="error-message" id="contact-email-error"></small>
+    </div>
+
+    <div>
+      <label for="subject">Subject</label>
+      <input id="subject" name="subject" type="text">
+    </div>
+
+    <div>
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+      <small class="error-message" id="message-error"></small>
+    </div>
+
+    <button type="submit">Send Message</button>
+    <p id="contact-success" class="success" aria-live="polite"></p>
+  </form>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>&copy; 2026 Evans PC Tech</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart | Evans PC Tech</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="brand-row">
+      <h1 class="site-title">Evans PC Tech</h1>
+      <form class="search-bar" action="products.html" method="get">
+        <label for="site-search" class="sr-only">Search products</label>
+        <input id="site-search" name="q" type="search" placeholder="Search PC parts and accessories">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>Shopping Cart</h2>
+    <p>Review your selected items before checkout.</p>
+  </section>
+  <section aria-label="Cart contents">
+    <table>
+      <thead>
+        <tr><th>Product</th><th>Quantity</th><th>Price</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>RTX Gaming Graphics Card</td><td>1</td><td>$599.99</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><th colspan="2">Total</th><th>$599.99</th></tr>
+      </tfoot>
+    </table>
+    <p><a class="button" href="checkout.html">Proceed to Checkout</a></p>
+  </section>
+
+</main>
+<footer>
+  <div class="footer-inner">
+    <p>&copy; 2026 Evans PC Tech</p>
+  </div>
+</footer>
+
+</body>
+</html>

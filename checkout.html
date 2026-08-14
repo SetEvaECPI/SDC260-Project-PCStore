@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Evans PC Tech</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="brand-row">
+      <h1 class="site-title">Evans PC Tech</h1>
+      <form class="search-bar" action="products.html" method="get">
+        <label for="site-search" class="sr-only">Search products</label>
+        <input id="site-search" name="q" type="search" placeholder="Search PC parts and accessories">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>Checkout</h2>
+    <p>Complete the shipping and payment forms below.</p>
+  </section>
+
+  <section class="checkout-layout">
+    <form id="checkout-form" class="panel" novalidate>
+      <fieldset>
+        <legend>Shipping Information</legend>
+
+        <div>
+          <label for="ship-name">Full Name *</label>
+          <input id="ship-name" name="shipName" type="text" required>
+          <small class="error-message" id="ship-name-error"></small>
+        </div>
+
+        <div>
+          <label for="street">Street Address *</label>
+          <input id="street" name="street" type="text" required>
+          <small class="error-message" id="street-error"></small>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="city">City *</label>
+            <input id="city" name="city" type="text" required>
+            <small class="error-message" id="city-error"></small>
+          </div>
+
+          <div>
+            <label for="state">State *</label>
+            <input id="state" name="state" type="text" maxlength="2" required>
+            <small class="error-message" id="state-error"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="zip">ZIP Code *</label>
+            <input id="zip" name="zip" type="text" inputmode="numeric" maxlength="10" required>
+            <small class="error-message" id="zip-error"></small>
+          </div>
+
+          <div>
+            <label for="phone">Phone Number *</label>
+            <input id="phone" name="phone" type="tel" required>
+            <small class="error-message" id="phone-error"></small>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Payment Information</legend>
+
+        <div>
+          <label for="card-name">Cardholder Name *</label>
+          <input id="card-name" name="cardName" type="text" required>
+          <small class="error-message" id="card-name-error"></small>
+        </div>
+
+        <div>
+          <label for="card-number">Credit Card Number *</label>
+          <input id="card-number" name="cardNumber" type="text" inputmode="numeric" maxlength="19" required>
+          <small class="error-message" id="card-number-error"></small>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="expiration">Expiration Date *</label>
+            <input id="expiration" name="expiration" type="month" required>
+            <small class="error-message" id="expiration-error"></small>
+          </div>
+
+          <div>
+            <label for="security-code">Security Code *</label>
+            <input id="security-code" name="securityCode" type="text" inputmode="numeric" maxlength="4" required>
+            <small class="error-message" id="security-code-error"></small>
+          </div>
+        </div>
+
+        <div>
+          <label for="coupon-code">Coupon Code</label>
+          <div class="coupon-row">
+            <input id="coupon-code" name="couponCode" type="text" placeholder="Try SAVE10">
+            <button type="button" id="apply-coupon">Apply Coupon</button>
+          </div>
+          <p id="coupon-message" aria-live="polite"></p>
+        </div>
+      </fieldset>
+
+      <button type="submit">Place Order</button>
+      <p id="checkout-success" class="success" aria-live="polite"></p>
+    </form>
+
+    <aside class="panel order-summary">
+      <h3>Order Summary</h3>
+      <p>RTX Gaming Graphics Card <span>$599.99</span></p>
+      <p>Gaming Mouse <span>$79.99</span></p>
+      <hr>
+      <p>Subtotal <span id="subtotal">$679.98</span></p>
+      <p>Discount <span id="discount">$0.00</span></p>
+      <p class="price">Total <span id="total">$679.98</span></p>
+    </aside>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>&copy; 2026 Evans PC Tech</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

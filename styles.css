@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1F2937;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+header {
+    background-color: #111827;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.header-inner,
+main,
+.footer-inner {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+.header-inner {
+    padding: 1rem 0;
+}
+
+.brand-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.search-bar {
+    display: flex;
+    flex: 1;
+    max-width: 520px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px 0 0 6px;
+}
+
+.search-bar button {
+    border-radius: 0 6px 6px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem 0 3rem;
+}
+
+.hero,
+.panel {
+    background-color: #374151;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero h2,
+.panel h2 {
+    margin-top: 0;
+}
+
+.button,
+button {
+    display: inline-block;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover,
+button:hover,
+.button:focus,
+button:focus {
+    opacity: 0.9;
+}
+
+.success {
+    color: #22C55E;
+    font-weight: bold;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.product-card,
+.category-card {
+    background-color: #E5E7EB;
+    color: #111827;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.product-image {
+    background-color: #D1D5DB;
+    min-height: 150px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #E5E7EB;
+    color: #111827;
+}
+
+th,
+td {
+    padding: 0.8rem;
+    border: 1px solid #9CA3AF;
+    text-align: left;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #9CA3AF;
+    border-radius: 6px;
+}
+
+footer {
+    background-color: #111827;
+    border-top: 1px solid #E5E7EB;
+}
+
+.footer-inner {
+    padding: 1.5rem 0;
+}
+
+@media (max-width: 900px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .brand-row,
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar {
+        max-width: none;
+        width: 100%;
+    }
+
+    .card-grid,
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+fieldset {
+    border: 1px solid #9CA3AF;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+.error-message {
+    color: #FCA5A5;
+    font-weight: bold;
+}
+
+.product-category {
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.order-summary p {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.coupon-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.coupon-row input {
+    flex: 1;
+}
+
+@media (max-width: 800px) {
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .coupon-row {
+        flex-direction: column;
+    }
+}
