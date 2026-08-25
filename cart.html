@@ -35,18 +35,22 @@
     <p>Review your selected items before checkout.</p>
   </section>
   <section aria-label="Cart contents">
-    <table>
-      <thead>
-        <tr><th>Product</th><th>Quantity</th><th>Price</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>RTX Gaming Graphics Card</td><td>1</td><td>$599.99</td></tr>
-      </tbody>
-      <tfoot>
-        <tr><th colspan="2">Total</th><th>$599.99</th></tr>
-      </tfoot>
-    </table>
-    <p><a class="button" href="checkout.html">Proceed to Checkout</a></p>
+    <p id="empty-cart-message" class="panel" hidden>Your cart is empty. <a href="products.html">Browse products</a> to add an item.</p>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>Product</th><th>Quantity</th><th>Price</th><th>Item Total</th><th>Action</th></tr>
+        </thead>
+        <tbody id="cart-items"></tbody>
+        <tfoot>
+          <tr><th colspan="3">Total</th><th id="cart-total">$0.00</th><th></th></tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="cart-actions">
+      <button type="button" id="clear-cart">Clear Cart</button>
+      <a class="button" id="checkout-button" href="checkout.html">Proceed to Checkout</a>
+    </div>
   </section>
 
 </main>
@@ -56,5 +60,7 @@
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
+
