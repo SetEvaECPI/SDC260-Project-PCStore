@@ -95,9 +95,25 @@ function displayProducts() {
   if (!productGrid) return;
 
   const inventory = getInventory();
+  const params = new URLSearchParams(window.location.search);
+  const searchQuery = (params.get("q") || "").trim().toLowerCase();
+  const visibleProducts = searchQuery
+    ? products.filter(product =>
+        `${product.name} ${product.category} ${product.description}`.toLowerCase().includes(searchQuery)
+      )
+    : products;
+
+  const searchInput = document.getElementById("site-search");
+  if (searchInput && searchQuery) searchInput.value = params.get("q");
+
   productGrid.innerHTML = "";
 
-  for (const product of products) {
+  if (visibleProducts.length === 0) {
+    productGrid.innerHTML = `<p class="panel no-results">No products matched “${params.get("q") || ""}”. Try another search.</p>`;
+    return;
+  }
+
+  for (const product of visibleProducts) {
     const available = inventory[product.id] ?? 0;
     const card = document.createElement("article");
     card.className = "product-card";
@@ -471,3 +487,4 @@ document.addEventListener("DOMContentLoaded", () => {
     detailAddButton.addEventListener("click", () => addToCart(Number(detailAddButton.dataset.productId)));
   }
 });
+
