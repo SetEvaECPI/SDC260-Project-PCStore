@@ -364,3 +364,42 @@ button:disabled,
 #empty-cart-message a {
     color: #93C5FD;
 }
+
+
+.network-details {
+    display: grid;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+}
+
+.network-details div {
+    display: grid;
+    grid-template-columns: minmax(210px, 1fr) 2fr;
+    gap: 1rem;
+    padding: 0.9rem;
+    background-color: #1F2937;
+    border-radius: 8px;
+}
+
+.network-details dt {
+    font-weight: bold;
+}
+
+.network-details dd {
+    margin: 0;
+}
+
+.network-status {
+    margin-bottom: 0;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+    .network-details div {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+}
